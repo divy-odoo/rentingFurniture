@@ -23,12 +23,17 @@ function Navbar() {
         </a>
         <a href="/">Home</a>
         <a href="/list">Service</a>
-        <a href="https://github.com/PandyaSumit/rentingFurniture" target="_blank">Code</a>
+        <a
+          href="https://github.com/PandyaSumit/rentingFurniture"
+          target="_blank"
+        >
+          Code
+        </a>
         {/* <a href="/">Agents</a> */}
       </div>
       <div className="right">
         {currentUser ? (
-          <div className="user" style={{zIndex:"999"}}>
+          <div className="user" style={{ zIndex: "999" }}>
             <img src={currentUser.avatar || "/noavatar.jpg"} alt="" />
             <span>{currentUser.username}</span>
             <Link to="/profile" className="profile">
@@ -37,12 +42,12 @@ function Navbar() {
             </Link>
           </div>
         ) : (
-          <>
+          <div style={{ zIndex: "999" }}>
             <a href="/login">Sign in</a>
             <a href="/register" className="register">
               Sign up
             </a>
-          </>
+          </div>
         )}
         <div className="menuIcon">
           <img
