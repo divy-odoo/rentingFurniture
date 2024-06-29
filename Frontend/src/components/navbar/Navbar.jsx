@@ -12,7 +12,7 @@ function Navbar() {
   const fetch = useNotificationStore((state) => state.fetch);
   const number = useNotificationStore((state) => state.number);
 
-  if(currentUser) fetch();
+  if (currentUser) fetch();
 
   return (
     <nav>
@@ -22,13 +22,13 @@ function Navbar() {
           <span>RentFurniture</span>
         </a>
         <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/">Contact</a>
-        <a href="/">Agents</a>
+        <a href="/list">Service</a>
+        <a href="https://github.com/PandyaSumit/rentingFurniture" target="_blank">Code</a>
+        {/* <a href="/">Agents</a> */}
       </div>
       <div className="right">
         {currentUser ? (
-          <div className="user">
+          <div className="user" style={{zIndex:"999"}}>
             <img src={currentUser.avatar || "/noavatar.jpg"} alt="" />
             <span>{currentUser.username}</span>
             <Link to="/profile" className="profile">
